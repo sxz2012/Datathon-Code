@@ -1,0 +1,21 @@
+# Kaggle competition data — not redistributable
+train.csv
+test.csv
+sample_submission.csv
+metaData.csv
+
+# Model output
+submission.csv
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb_checkpoints
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.env
+
+# OS
+.DS_Store
