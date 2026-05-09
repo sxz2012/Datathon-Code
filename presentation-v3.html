@@ -49,7 +49,7 @@ body::after {
 .slide {
   position: absolute; inset: 0;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  padding: 56px 80px;
+  padding: 80px 100px;
   opacity: 0; visibility: hidden;
   transition: opacity 600ms cubic-bezier(.2,.8,.2,1);
 }
@@ -65,7 +65,7 @@ body::after {
 .slide.active .reveal-4 { animation-delay: 660ms; }
 
 .eyebrow {
-  font-size: 24px; letter-spacing: 0.32em; text-transform: uppercase;
+  font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--muted); font-weight: 600;
 }
 .eyebrow .step {
@@ -76,21 +76,21 @@ body::after {
 .h1 {
   font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-variation-settings: "opsz" 144, "SOFT" 30;
-  font-size: clamp(112px, 16.8vw, 264px); line-height: 0.92;
+  font-size: clamp(56px, 8.4vw, 132px); line-height: 0.92;
   letter-spacing: -0.035em; font-weight: 300; margin: 0;
 }
 .h2 {
   font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-variation-settings: "opsz" 144, "SOFT" 30;
-  font-size: clamp(80px, 10.8vw, 160px); line-height: 1;
+  font-size: clamp(40px, 5.4vw, 80px); line-height: 1;
   letter-spacing: -0.022em; font-weight: 350; margin: 0;
 }
 .h3 {
-  font-size: clamp(40px, 4.4vw, 60px); line-height: 1.3;
+  font-size: clamp(20px, 2.2vw, 30px); line-height: 1.3;
   letter-spacing: -0.005em; font-weight: 350; margin: 0; color: var(--muted);
 }
 .body {
-  font-size: clamp(30px, 2.4vw, 36px);
+  font-size: clamp(15px, 1.2vw, 18px);
   line-height: 1.55; color: var(--muted); font-weight: 400;
 }
 .accent { color: var(--accent); }
@@ -100,7 +100,7 @@ body::after {
 /* Page chrome */
 .brand {
   position: fixed; top: 28px; left: 36px;
-  font-size: 21px; letter-spacing: 0.32em; text-transform: uppercase;
+  font-size: 10.5px; letter-spacing: 0.32em; text-transform: uppercase;
   color: #555; font-weight: 600; z-index: 60;
 }
 .pageno {
@@ -109,12 +109,12 @@ body::after {
   display: flex; align-items: baseline; gap: 4px;
 }
 .pageno .current {
-  font-size: 56px; font-weight: 300; color: #fff;
+  font-size: 28px; font-weight: 300; color: #fff;
   letter-spacing: -0.02em;
   font-feature-settings: "tnum" 1;
 }
 .pageno .sep, .pageno .total {
-  font-size: 26px; font-weight: 600; color: #555;
+  font-size: 13px; font-weight: 600; color: #555;
   letter-spacing: 0.18em;
 }
 .dots {
@@ -129,7 +129,7 @@ body::after {
 .dot.active { background: var(--accent); width: 24px; border-radius: 3px; }
 .hint {
   position: fixed; bottom: 28px; right: 36px;
-  font-size: 21px; letter-spacing: 0.24em; color: #444; z-index: 60;
+  font-size: 10.5px; letter-spacing: 0.24em; color: #444; z-index: 60;
   font-weight: 600;
 }
 
@@ -165,13 +165,13 @@ body::after {
 /* Chart slides */
 .chart-slide {
   justify-content: flex-start; align-items: stretch;
-  padding-top: 56px; padding-bottom: 48px;
+  padding-top: 96px; padding-bottom: 80px;
 }
 .chart-head { display: flex; flex-direction: column; gap: 14px; }
 .chart-head .h2 { max-width: 22ch; }
 .chart-head .body { max-width: 60ch; }
 .chart-body {
-  flex: 1; min-height: 0; margin-top: 16px; position: relative;
+  flex: 1; min-height: 0; margin-top: 32px; position: relative;
   display: flex; align-items: center; justify-content: center;
 }
 .chart-svg { width: 100%; height: 100%; display: block; }
@@ -192,12 +192,12 @@ body::after {
   gap: 14px;
 }
 .s4 .formula-header {
-  font-size: 18px; letter-spacing: 0.32em; color: #888; font-weight: 700;
+  font-size: 9px; letter-spacing: 0.32em; color: #888; font-weight: 700;
   margin-bottom: 4px;
 }
 .s4 .formula-display {
   color: #f5f5f5;
-  font-size: clamp(22px, 2vw, 32px);
+  font-size: clamp(11px, 1vw, 16px);
 }
 .s4 .formula-display .katex { color: inherit; }
 .s4 .formula-display .katex .frac-line { border-color: #aaa; }
@@ -210,17 +210,17 @@ body::after {
   font-family: ui-monospace, monospace;
 }
 .s4 .r-line { width: 50px; height: 1px; background: #2a2a2a; }
-.s4 .r-tick { font-size: 22px; font-weight: 700; }
+.s4 .r-tick { font-size: 11px; font-weight: 700; }
 .s4 .r-tick.neg { color: #4a9eff; }
 .s4 .r-tick.zero { color: #555; }
 .s4 .r-tick.pos { color: var(--accent); }
 .s4 .r-note-inline {
-  font-size: 14px; letter-spacing: 2.5px;
+  font-size: 7px; letter-spacing: 2.5px;
   color: #555; font-weight: 700; text-align: center;
   margin-top: 0;
 }
 .s4 .threshold-note {
-  font-size: 18px; color: #cfcfcf; letter-spacing: 0.01em; font-weight: 400;
+  font-size: 9px; color: #cfcfcf; letter-spacing: 0.01em; font-weight: 400;
   margin-top: 12px; text-align: center; max-width: 38ch;
 }
 .s4 .threshold-note .accent-mono { color: var(--accent); font-family: ui-monospace, monospace; }
@@ -255,7 +255,7 @@ body::after {
   gap: clamp(20px, 2vw, 36px);
 }
 .s9 .conclusion-item .num {
-  font-size: clamp(28px, 3vw, 44px);
+  font-size: clamp(14px, 1.5vw, 22px);
   font-weight: 400; color: var(--accent);
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
   letter-spacing: -0.01em;
@@ -263,7 +263,7 @@ body::after {
   flex-shrink: 0; min-width: 1.5ch;
 }
 .s9 .conclusion-item .text {
-  font-size: clamp(56px, 7.8vw, 116px);
+  font-size: clamp(28px, 3.9vw, 58px);
   line-height: 1; letter-spacing: -0.03em; font-weight: 250;
   color: #fff;
   text-shadow: 0 0 24px rgba(0,0,0,0.6);
@@ -276,13 +276,13 @@ body::after {
   text-align: center;
 }
 .s9 .bookend {
-  font-size: clamp(24px, 2vw, 28px);
+  font-size: clamp(12px, 1vw, 14px);
   letter-spacing: 0.34em; text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85); font-weight: 600;
   text-shadow: 0 0 12px rgba(0,0,0,0.5);
 }
 .s9 .recap {
-  font-size: 22px; letter-spacing: 0.24em;
+  font-size: 11px; letter-spacing: 0.24em;
   color: var(--accent); font-weight: 700;
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
   margin-top: 14px;
@@ -299,19 +299,19 @@ body::after {
 .s8 .hero-num {
   font-family: "Fraunces", Georgia, serif;
   font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-size: clamp(280px, 44vw, 640px);
+  font-size: clamp(140px, 22vw, 320px);
   line-height: 0.85; letter-spacing: -0.06em;
   font-weight: 300;
   font-variant-numeric: tabular-nums;
 }
 .s8 .hero-tag {
-  font-size: 24px; letter-spacing: 0.34em; text-transform: uppercase;
+  font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase;
   color: var(--muted); font-weight: 700;
   margin-top: 12px;
 }
 .s8 .hero-context {
   text-align: center;
-  font-size: 22px; letter-spacing: 0.18em;
+  font-size: 11px; letter-spacing: 0.18em;
   color: #555; font-weight: 600;
   margin-top: 16px;
 }
@@ -647,14 +647,14 @@ function renderChart2() {
     const fill = isLast ? "#ff6b35" : "#000";
     const stroke = isLast ? "#ff6b35" : "#2a2a2a";
     svg("circle", {
-      cx: s.x, cy: cy, r: 56, fill: fill, stroke: stroke,
+      cx: s.x, cy: cy, r: 80, fill: fill, stroke: stroke,
       "stroke-width": 1.5
     }, g);
 
     const numText = svg("text", {
       x: s.x, y: cy + 14,
       fill: isLast ? "#000" : "#fff",
-      "font-size": 38, "text-anchor": "middle",
+      "font-size": 60.8, "text-anchor": "middle",
       "font-weight": 250, "letter-spacing": -1.5,
       "font-variant-numeric": "tabular-nums"
     }, g);
@@ -663,7 +663,7 @@ function renderChart2() {
     // Label below
     const labelText = svg("text", {
       x: s.x, y: cy + 90,
-      fill: "#888", "font-size": 11,
+      fill: "#888", "font-size": 17.6,
       "text-anchor": "middle", "font-weight": 600,
       "letter-spacing": "3"
     }, g);
@@ -674,7 +674,7 @@ function renderChart2() {
       const midX = (stages[i - 1].x + s.x) / 2;
       const stepLabel = svg("text", {
         x: midX, y: cy - 80,
-        fill: "#ff6b35", "font-size": 13,
+        fill: "#ff6b35", "font-size": 20.8,
         "text-anchor": "middle", "font-weight": 700,
         "letter-spacing": "3.5"
       }, g);
@@ -682,7 +682,7 @@ function renderChart2() {
 
       const stepDesc = svg("text", {
         x: midX, y: cy - 60,
-        fill: "#666", "font-size": 11,
+        fill: "#666", "font-size": 17.6,
         "text-anchor": "middle", "font-weight": 500,
         "letter-spacing": "0.5"
       }, g);
@@ -730,21 +730,21 @@ function renderChart3() {
     svg("line", { x1: x, x2: x, y1: H - PAD_B, y2: H - PAD_B + 5, stroke: "#2a2a2a" }, root);
     const text = svg("text", {
       x: x, y: H - PAD_B + 22, fill: "#555",
-      "font-size": 11, "text-anchor": "middle", "font-weight": 600,
+      "font-size": 17.6, "text-anchor": "middle", "font-weight": 600,
       "font-family": "ui-monospace, monospace"
     }, root);
     text.textContent = (t > 0 ? "+" : "") + t.toFixed(2);
   }
   const zero = svg("text", {
     x: cx, y: H - PAD_B + 22, fill: "#777",
-    "font-size": 11, "text-anchor": "middle", "font-weight": 700
+    "font-size": 17.6, "text-anchor": "middle", "font-weight": 700
   }, root);
   zero.textContent = "0";
 
   // Axis label
   const axisLabel = svg("text", {
     x: cx, y: H - PAD_B + 38, fill: "#555",
-    "font-size": 10, "text-anchor": "middle", "font-weight": 600,
+    "font-size": 16, "text-anchor": "middle", "font-weight": 600,
     "letter-spacing": "2"
   }, root);
   axisLabel.textContent = "PEARSON CORRELATION WITH HIT_BY_48H";
@@ -758,7 +758,7 @@ function renderChart3() {
     // Feature name (left side, aligned to the axis)
     const labelText = svg("text", {
       x: PAD_L - 12, y: y + barH / 2 + 4,
-      fill: "#cfcfcf", "font-size": 11, "text-anchor": "end", "font-weight": 400
+      fill: "#cfcfcf", "font-size": 17.6, "text-anchor": "end", "font-weight": 400
     }, root);
     labelText.textContent = d.name;
 
@@ -781,7 +781,7 @@ function renderChart3() {
     const valueText = svg("text", {
       x: cx, y: y + barH / 2 + 4,
       fill: placeInside ? "#0a0a0a" : color,
-      "font-size": 10,
+      "font-size": 16,
       "font-weight": 700,
       "text-anchor": placeInside
         ? (isPos ? "end" : "start")
@@ -849,7 +849,7 @@ function renderChart4() {
           const txt = svg("text", {
             x: x + cellSize / 2, y: y + cellSize / 2 + 4,
             fill: val > 0.93 ? "#1a0a04" : "#fff",
-            "font-size": 11, "text-anchor": "middle", "font-weight": 700,
+            "font-size": 17.6, "text-anchor": "middle", "font-weight": 700,
             "font-family": "ui-monospace, monospace", opacity: 0
           }, root);
           txt.textContent = val.toFixed(2);
@@ -858,7 +858,7 @@ function renderChart4() {
         } else {
           const txt = svg("text", {
             x: x + cellSize / 2, y: y + cellSize / 2 + 4,
-            fill: "#666", "font-size": 11, "text-anchor": "middle",
+            fill: "#666", "font-size": 17.6, "text-anchor": "middle",
             "font-family": "ui-monospace, monospace", "font-weight": 600, opacity: 0
           }, root);
           txt.textContent = "1.00";
@@ -877,7 +877,7 @@ function renderChart4() {
   HEATMAP_FEATURES.forEach((name, i) => {
     const t = svg("text", {
       x: startX - 12, y: startY + i * cellSize + cellSize / 2 + 4,
-      fill: "#9a9a9a", "font-size": 13, "text-anchor": "end", "font-weight": 400
+      fill: "#9a9a9a", "font-size": 20.8, "text-anchor": "end", "font-weight": 400
     }, root);
     t.textContent = name;
   });
@@ -885,7 +885,7 @@ function renderChart4() {
     const cx = startX + j * cellSize + cellSize / 2;
     const cy = startY - 14;
     const t = svg("text", {
-      x: cx, y: cy, fill: "#9a9a9a", "font-size": 13, "font-weight": 400,
+      x: cx, y: cy, fill: "#9a9a9a", "font-size": 20.8, "font-weight": 400,
       "text-anchor": "start",
       transform: `rotate(-50, ${cx}, ${cy})`
     }, root);
@@ -906,14 +906,14 @@ function renderChart4() {
 
   const spotLabel = svg("text", {
     x: spotX, y: spotY,
-    fill: "#888", "font-size": 11, "font-weight": 700,
+    fill: "#888", "font-size": 17.6, "font-weight": 700,
     "letter-spacing": "3"
   }, spot);
   spotLabel.textContent = "OUTSIDE THIS CLUSTER";
 
   const spotValue = svg("text", {
     x: spotX, y: spotY + 90,
-    fill: "#ff6b35", "font-size": 88, "font-weight": 200,
+    fill: "#ff6b35", "font-size": 140.8, "font-weight": 200,
     "font-family": "ui-monospace, monospace", "letter-spacing": -3
   }, spot);
   spotValue.textContent = "1.000";
@@ -932,7 +932,7 @@ function renderChart4() {
 
   const cap = svg("text", {
     x: spotX, y: spotY + 220,
-    fill: "#666", "font-size": 11, "font-weight": 700, "letter-spacing": "3"
+    fill: "#666", "font-size": 17.6, "font-weight": 700, "letter-spacing": "3"
   }, spot);
   cap.textContent = "TWO FEATURES. ONE SIGNAL.";
 
@@ -945,11 +945,11 @@ function renderChart4() {
     svg("stop", { offset: `${t * 100}%`, "stop-color": colorFor(0.7 + t * 0.3) }, grad);
   }
   svg("rect", { x: legX, y: legY, width: legW, height: legH, fill: "url(#hmGrad)", rx: 1 }, root);
-  const lt1 = svg("text", { x: legX, y: legY + 24, fill: "#666", "font-size": 11, "font-weight": 600, "font-family": "ui-monospace, monospace" }, root);
+  const lt1 = svg("text", { x: legX, y: legY + 24, fill: "#666", "font-size": 17.6, "font-weight": 600, "font-family": "ui-monospace, monospace" }, root);
   lt1.textContent = "0.70";
-  const lt2 = svg("text", { x: legX + legW, y: legY + 24, fill: "#666", "font-size": 11, "font-weight": 600, "text-anchor": "end", "font-family": "ui-monospace, monospace" }, root);
+  const lt2 = svg("text", { x: legX + legW, y: legY + 24, fill: "#666", "font-size": 17.6, "font-weight": 600, "text-anchor": "end", "font-family": "ui-monospace, monospace" }, root);
   lt2.textContent = "1.00";
-  const lt3 = svg("text", { x: legX + legW / 2, y: legY - 8, fill: "#666", "font-size": 10, "text-anchor": "middle", "font-weight": 700, "letter-spacing": "3" }, root);
+  const lt3 = svg("text", { x: legX + legW / 2, y: legY - 8, fill: "#666", "font-size": 16, "text-anchor": "middle", "font-weight": 700, "letter-spacing": "3" }, root);
   lt3.textContent = "PEARSON CORRELATION";
 }
 
@@ -977,7 +977,7 @@ function renderChart5() {
   ];
   headers.forEach(h => {
     const t = svg("text", {
-      x: h.x, y: 36, fill: "#888", "font-size": 11,
+      x: h.x, y: 36, fill: "#888", "font-size": 17.6,
       "font-weight": 700, "letter-spacing": "3"
     }, root);
     t.textContent = h.text;
@@ -1007,7 +1007,7 @@ function renderChart5() {
     // Rank
     const rank = svg("text", {
       x: X_RANK, y: y + 10,
-      fill: "#3a3a3a", "font-size": 14, "font-weight": 700,
+      fill: "#3a3a3a", "font-size": 22.4, "font-weight": 700,
       "font-family": "ui-monospace, monospace"
     }, g);
     rank.textContent = String(i + 1).padStart(2, "0");
@@ -1015,7 +1015,7 @@ function renderChart5() {
     // Dropped name (strikethrough)
     const droppedText = svg("text", {
       x: X_DROP, y: y + 10,
-      fill: "#9c9c9c", "font-size": 17, "font-weight": 400,
+      fill: "#9c9c9c", "font-size": 27.2, "font-weight": 400,
       "text-decoration": "line-through"
     }, g);
     droppedText.textContent = d.dropped;
@@ -1024,14 +1024,14 @@ function renderChart5() {
     if (d.r !== null) {
       const rText = svg("text", {
         x: X_R, y: y + 10,
-        fill: "#dcdcdc", "font-size": 15, "font-weight": 600,
+        fill: "#dcdcdc", "font-size": 24, "font-weight": 600,
         "font-family": "ui-monospace, monospace"
       }, g);
       rText.textContent = `r = ${d.r > 0 ? "+" : ""}${d.r.toFixed(3)}`;
     } else {
       const rText = svg("text", {
         x: X_R, y: y + 10,
-        fill: "#dcdcdc", "font-size": 15, "font-weight": 500
+        fill: "#dcdcdc", "font-size": 24, "font-weight": 500
       }, g);
       rText.textContent = "near-constant";
     }
@@ -1039,7 +1039,7 @@ function renderChart5() {
     // Tag (REDUNDANT / NEAR-CONSTANT / etc.)
     const tag = svg("text", {
       x: X_R, y: y + 32,
-      fill: "#ff6b35", "font-size": 10, "font-weight": 700,
+      fill: "#ff6b35", "font-size": 16, "font-weight": 700,
       "letter-spacing": "2.5"
     }, g);
     tag.textContent = d.tag;
@@ -1053,13 +1053,13 @@ function renderChart5() {
 
       const keptText = svg("text", {
         x: X_KEPT, y: y + 10,
-        fill: "#fff", "font-size": 17, "font-weight": 400
+        fill: "#fff", "font-size": 27.2, "font-weight": 400
       }, g);
       keptText.textContent = d.kept;
     } else {
       const dash = svg("text", {
         x: X_KEPT, y: y + 10,
-        fill: "#444", "font-size": 17, "font-weight": 400
+        fill: "#444", "font-size": 27.2, "font-weight": 400
       }, g);
       dash.textContent = "—";
     }
@@ -1095,13 +1095,13 @@ function renderChart5() {
 
   const summary = svg("text", {
     x: X_RANK, y: H - 20,
-    fill: "#cfcfcf", "font-size": 14, "font-weight": 400
+    fill: "#cfcfcf", "font-size": 22.4, "font-weight": 400
   }, footer);
   summary.textContent = "5 features removed · 4 had a near-perfect twin · 1 was nearly constant";
 
   const arrow = svg("text", {
     x: X_END, y: H - 20,
-    fill: "#ff6b35", "font-size": 14, "font-weight": 700,
+    fill: "#ff6b35", "font-size": 22.4, "font-weight": 700,
     "text-anchor": "end", "font-family": "ui-monospace, monospace",
     "letter-spacing": "0.5"
   }, footer);
@@ -1130,7 +1130,7 @@ function renderThresholdVisual(parent, x0, y0, w, h) {
     svg("line", { x1: x, x2: x, y1: axisY - 3, y2: axisY + 3, stroke: "#2a2a2a" }, parent);
     const t = svg("text", {
       x: x, y: axisY + 22, fill: "#555",
-      "font-size": 10, "text-anchor": "middle", "font-weight": 600,
+      "font-size": 16, "text-anchor": "middle", "font-weight": 600,
       "font-family": "ui-monospace, monospace"
     }, parent);
     t.textContent = label;
@@ -1144,7 +1144,7 @@ function renderThresholdVisual(parent, x0, y0, w, h) {
   }, parent);
   const tlbl = svg("text", {
     x: tx, y: y0 - 8, fill: "#ff6b35",
-    "font-size": 10, "font-weight": 700, "text-anchor": "middle",
+    "font-size": 16, "font-weight": 700, "text-anchor": "middle",
     "letter-spacing": "1.5"
   }, parent);
   tlbl.textContent = "5 km";
@@ -1152,13 +1152,13 @@ function renderThresholdVisual(parent, x0, y0, w, h) {
   // Side labels
   const hitLbl = svg("text", {
     x: x0 - 10, y: axisY - 12, fill: "#ff6b35",
-    "font-size": 10, "font-weight": 700, "text-anchor": "end", "letter-spacing": "1.5"
+    "font-size": 16, "font-weight": 700, "text-anchor": "end", "letter-spacing": "1.5"
   }, parent);
   hitLbl.textContent = "HIT";
 
   const missLbl = svg("text", {
     x: x0 - 10, y: axisY + 18, fill: "#888",
-    "font-size": 10, "font-weight": 700, "text-anchor": "end", "letter-spacing": "1.5"
+    "font-size": 16, "font-weight": 700, "text-anchor": "end", "letter-spacing": "1.5"
   }, parent);
   missLbl.textContent = "MISS";
 
@@ -1200,21 +1200,21 @@ function renderLogVisual(parent, x0, y0, w, h) {
   // Row labels
   const linLbl = svg("text", {
     x: x0 - 10, y: yLin + 3, fill: "#888",
-    "font-size": 10, "font-weight": 700, "text-anchor": "end", "letter-spacing": "1.5"
+    "font-size": 16, "font-weight": 700, "text-anchor": "end", "letter-spacing": "1.5"
   }, parent);
   linLbl.textContent = "LINEAR";
 
   const logLbl = svg("text", {
     x: x0 - 10, y: yLog + 3, fill: "#ff6b35",
-    "font-size": 10, "font-weight": 700, "text-anchor": "end", "letter-spacing": "1.5"
+    "font-size": 16, "font-weight": 700, "text-anchor": "end", "letter-spacing": "1.5"
   }, parent);
   logLbl.textContent = "LOG";
 
   // Tick endpoints (just min/max for visual reference)
-  svg("text", { x: x0,     y: yLin + 18, fill: "#555", "font-size": 10, "text-anchor": "start", "font-family": "ui-monospace, monospace" }, parent).textContent = "0";
-  svg("text", { x: x0 + w, y: yLin + 18, fill: "#555", "font-size": 10, "text-anchor": "end",   "font-family": "ui-monospace, monospace" }, parent).textContent = "100km+";
-  svg("text", { x: x0,     y: yLog + 18, fill: "#555", "font-size": 10, "text-anchor": "start", "font-family": "ui-monospace, monospace" }, parent).textContent = "100m";
-  svg("text", { x: x0 + w, y: yLog + 18, fill: "#555", "font-size": 10, "text-anchor": "end",   "font-family": "ui-monospace, monospace" }, parent).textContent = "1Mm";
+  svg("text", { x: x0,     y: yLin + 18, fill: "#555", "font-size": 16, "text-anchor": "start", "font-family": "ui-monospace, monospace" }, parent).textContent = "0";
+  svg("text", { x: x0 + w, y: yLin + 18, fill: "#555", "font-size": 16, "text-anchor": "end",   "font-family": "ui-monospace, monospace" }, parent).textContent = "100km+";
+  svg("text", { x: x0,     y: yLog + 18, fill: "#555", "font-size": 16, "text-anchor": "start", "font-family": "ui-monospace, monospace" }, parent).textContent = "100m";
+  svg("text", { x: x0 + w, y: yLog + 18, fill: "#555", "font-size": 16, "text-anchor": "end",   "font-family": "ui-monospace, monospace" }, parent).textContent = "1Mm";
 
   // Dots — same set on both axes
   all.forEach(d => {
@@ -1232,7 +1232,7 @@ function renderLogVisual(parent, x0, y0, w, h) {
 function renderBrierImpact(parent, x0, y0, w, title, deltas) {
   const titleEl = svg("text", {
     x: x0, y: y0,
-    fill: "#888", "font-size": 11, "font-weight": 700, "letter-spacing": 3
+    fill: "#888", "font-size": 17.6, "font-weight": 700, "letter-spacing": 3
   }, parent);
   titleEl.textContent = title;
 
@@ -1246,7 +1246,7 @@ function renderBrierImpact(parent, x0, y0, w, title, deltas) {
     // Horizon
     const hLabel = svg("text", {
       x: cx, y: y0 + 28,
-      fill: "#666", "font-size": 11, "font-weight": 700, "letter-spacing": 2,
+      fill: "#666", "font-size": 17.6, "font-weight": 700, "letter-spacing": 2,
       "text-anchor": "middle"
     }, parent);
     hLabel.textContent = `${d.horizon}h`;
@@ -1254,7 +1254,7 @@ function renderBrierImpact(parent, x0, y0, w, title, deltas) {
     // Delta value (signed)
     const valText = svg("text", {
       x: cx, y: y0 + 60,
-      fill: color, "font-size": 22, "font-weight": 300,
+      fill: color, "font-size": 35.2, "font-weight": 300,
       "font-family": "ui-monospace, monospace",
       "text-anchor": "middle", "letter-spacing": -0.5
     }, parent);
@@ -1265,7 +1265,7 @@ function renderBrierImpact(parent, x0, y0, w, title, deltas) {
       const note = svg("text", {
         x: cx, y: y0 + 80,
         fill: helped ? "#ff6b35" : "#666",
-        "font-size": 10, "font-weight": 700, "letter-spacing": 2,
+        "font-size": 16, "font-weight": 700, "letter-spacing": 2,
         "text-anchor": "middle"
       }, parent);
       note.textContent = d.note.toUpperCase();
@@ -1310,26 +1310,26 @@ function renderChart6() {
     const rawX = 80, rawW = 380;
     const rawTitle = svg("text", {
       x: rawX, y: y,
-      fill: "#666", "font-size": 11, "font-weight": 700, "letter-spacing": "3"
+      fill: "#666", "font-size": 17.6, "font-weight": 700, "letter-spacing": "3"
     }, g);
     rawTitle.textContent = "RAW FEATURE";
 
     const rawName = svg("text", {
       x: rawX, y: y + 36,
-      fill: "#cfcfcf", "font-size": 24, "font-weight": 400,
+      fill: "#cfcfcf", "font-size": 38.4, "font-weight": 400,
       "font-family": "ui-monospace, monospace"
     }, g);
     rawName.textContent = e.raw;
 
     const rawImpLabel = svg("text", {
       x: rawX, y: y + 78,
-      fill: "#666", "font-size": 11, "font-weight": 700, "letter-spacing": "2.5"
+      fill: "#666", "font-size": 17.6, "font-weight": 700, "letter-spacing": "2.5"
     }, g);
     rawImpLabel.textContent = "IMPORTANCE";
 
     const rawImpVal = svg("text", {
       x: rawX, y: y + 130,
-      fill: "#fff", "font-size": 56, "font-weight": 200,
+      fill: "#fff", "font-size": 89.6, "font-weight": 200,
       "font-family": "ui-monospace, monospace", "letter-spacing": -2
     }, g);
     rawImpVal.textContent = e.rawImp.toFixed(2);
@@ -1358,14 +1358,14 @@ function renderChart6() {
 
     const formulaText = svg("text", {
       x: (arrowX + arrowEndX) / 2, y: arrowY - 14,
-      fill: "#ff6b35", "font-size": 13, "font-weight": 700,
+      fill: "#ff6b35", "font-size": 20.8, "font-weight": 700,
       "text-anchor": "middle", "letter-spacing": 1.5
     }, g);
     formulaText.textContent = e.label.toUpperCase();
 
     const formulaCode = svg("text", {
       x: (arrowX + arrowEndX) / 2, y: arrowY + 22,
-      fill: "#aaa", "font-size": 12, "font-weight": 500,
+      fill: "#aaa", "font-size": 19.2, "font-weight": 500,
       "text-anchor": "middle", "font-family": "ui-monospace, monospace"
     }, g);
     formulaCode.textContent = e.formula;
@@ -1374,26 +1374,26 @@ function renderChart6() {
     const engX = arrowEndX + 50;
     const engTitle = svg("text", {
       x: engX, y: y,
-      fill: "#ff6b35", "font-size": 11, "font-weight": 700, "letter-spacing": "3"
+      fill: "#ff6b35", "font-size": 17.6, "font-weight": 700, "letter-spacing": "3"
     }, g);
     engTitle.textContent = "★ ENGINEERED";
 
     const engName = svg("text", {
       x: engX, y: y + 36,
-      fill: "#fff", "font-size": 24, "font-weight": 500,
+      fill: "#fff", "font-size": 38.4, "font-weight": 500,
       "font-family": "ui-monospace, monospace"
     }, g);
     engName.textContent = e.eng;
 
     const engImpLabel = svg("text", {
       x: engX, y: y + 78,
-      fill: "#666", "font-size": 11, "font-weight": 700, "letter-spacing": "2.5"
+      fill: "#666", "font-size": 17.6, "font-weight": 700, "letter-spacing": "2.5"
     }, g);
     engImpLabel.textContent = "IMPORTANCE";
 
     const engImpVal = svg("text", {
       x: engX, y: y + 130,
-      fill: "#ff6b35", "font-size": 56, "font-weight": 250,
+      fill: "#ff6b35", "font-size": 89.6, "font-weight": 250,
       "font-family": "ui-monospace, monospace", "letter-spacing": -2
     }, g);
     engImpVal.textContent = e.engImp.toFixed(2);
@@ -1410,14 +1410,14 @@ function renderChart6() {
     const lift = (e.engImp / e.rawImp);
     const liftText = svg("text", {
       x: engX + 230, y: y + 130,
-      fill: "#ff6b35", "font-size": 32, "font-weight": 200,
+      fill: "#ff6b35", "font-size": 51.2, "font-weight": 200,
       "font-family": "ui-monospace, monospace", "letter-spacing": -1
     }, g);
     liftText.textContent = `×${lift.toFixed(1)}`;
 
     const liftLabel = svg("text", {
       x: engX + 230, y: y + 152,
-      fill: "#666", "font-size": 10, "font-weight": 700, "letter-spacing": "2.5"
+      fill: "#666", "font-size": 16, "font-weight": 700, "letter-spacing": "2.5"
     }, g);
     liftLabel.textContent = "LIFT";
 
@@ -1429,14 +1429,14 @@ function renderChart6() {
 
     const whyLabel = svg("text", {
       x: rawX, y: whyY,
-      fill: "#ff6b35", "font-size": 11, "font-weight": 700, "letter-spacing": 3
+      fill: "#ff6b35", "font-size": 17.6, "font-weight": 700, "letter-spacing": 3
     }, whyG);
     whyLabel.textContent = "WHY IT WORKS";
 
     // Caption for the visual
     const cap = svg("text", {
       x: rawX + 130, y: whyY,
-      fill: "#a8a8a8", "font-size": 12, "font-weight": 400
+      fill: "#a8a8a8", "font-size": 19.2, "font-weight": 400
     }, whyG);
     cap.textContent = e.caption;
 
@@ -1480,14 +1480,14 @@ function renderChart7() {
     const x = PAD_L + c * cellW + cellW / 2;
     const t = svg("text", {
       x, y: PAD_T - 56,
-      fill: "#666", "font-size": 11, "font-weight": 700, "letter-spacing": "3",
+      fill: "#666", "font-size": 17.6, "font-weight": 700, "letter-spacing": "3",
       "text-anchor": "middle"
     }, root);
     t.textContent = "HORIZON";
 
     const num = svg("text", {
       x, y: PAD_T - 22,
-      fill: "#fff", "font-size": 28, "font-weight": 250,
+      fill: "#fff", "font-size": 44.8, "font-weight": 250,
       "text-anchor": "middle",
       "font-variant-numeric": "tabular-nums",
       "letter-spacing": -1
@@ -1507,14 +1507,14 @@ function renderChart7() {
     const rowLabel = svg("text", {
       x: PAD_L - 22, y: y + cellH / 2 - 6,
       fill: isWinner ? "#ff6b35" : "#fff",
-      "font-size": 17, "font-weight": isWinner ? 600 : 400,
+      "font-size": 27.2, "font-weight": isWinner ? 600 : 400,
       "text-anchor": "end"
     }, g);
     rowLabel.textContent = `${v.count}  ·  ${v.label}`;
 
     const rowSub = svg("text", {
       x: PAD_L - 22, y: y + cellH / 2 + 16,
-      fill: "#666", "font-size": 11, "font-weight": 600,
+      fill: "#666", "font-size": 17.6, "font-weight": 600,
       "text-anchor": "end", "letter-spacing": "1.5"
     }, g);
     rowSub.textContent = v.desc.toUpperCase();
@@ -1539,7 +1539,7 @@ function renderChart7() {
       const valText = svg("text", {
         x: x + cellW / 2, y: y + cellH / 2 + 6,
         fill: valColor,
-        "font-size": 22, "font-weight": isBest ? 700 : 400,
+        "font-size": 35.2, "font-weight": isBest ? 700 : 400,
         "text-anchor": "middle",
         "font-family": "ui-monospace, monospace",
         "font-variant-numeric": "tabular-nums",
@@ -1552,7 +1552,7 @@ function renderChart7() {
       if (isBest) {
         const tag = svg("text", {
           x: x + cellW - 14, y: y + 22,
-          fill: "#000", "font-size": 11, "font-weight": 700,
+          fill: "#000", "font-size": 17.6, "font-weight": 700,
           "text-anchor": "end", "letter-spacing": 1
         }, g);
         tag.textContent = "BEST";
@@ -1563,14 +1563,14 @@ function renderChart7() {
   // Footer caption
   const cap = svg("text", {
     x: PAD_L - 22, y: H - 22,
-    fill: "#666", "font-size": 12, "font-weight": 500,
+    fill: "#666", "font-size": 19.2, "font-weight": 500,
     "text-anchor": "end"
   }, root);
   cap.textContent = "CatBoost validation Brier · lower is better";
 
   const cap2 = svg("text", {
     x: W - PAD_R, y: H - 22,
-    fill: "#ff6b35", "font-size": 12, "font-weight": 700,
+    fill: "#ff6b35", "font-size": 19.2, "font-weight": 700,
     "text-anchor": "end", "letter-spacing": "2"
   }, root);
   cap2.textContent = "→ SHIP THE 36-FEATURE SET";
@@ -1597,7 +1597,7 @@ function renderChart8() {
   // Header
   const head = svg("text", {
     x: PAD_L, y: PAD_T - 20,
-    fill: "#888", "font-size": 11, "font-weight": 700, "letter-spacing": "3"
+    fill: "#888", "font-size": 17.6, "font-weight": 700, "letter-spacing": "3"
   }, root);
   head.textContent = "TOP 5 FEATURES BY MODEL IMPORTANCE · 48H";
 
@@ -1611,7 +1611,7 @@ function renderChart8() {
     svg("line", { x1: x, x2: x, y1: H - PAD_B, y2: H - PAD_B + 5, stroke: "#2a2a2a" }, root);
     const text = svg("text", {
       x: x, y: H - PAD_B + 22, fill: "#555",
-      "font-size": 11, "text-anchor": "middle", "font-weight": 600,
+      "font-size": 17.6, "text-anchor": "middle", "font-weight": 600,
       "font-family": "ui-monospace, monospace"
     }, root);
     text.textContent = t.toString();
@@ -1623,14 +1623,14 @@ function renderChart8() {
 
     const star = svg("text", {
       x: PAD_L - 16, y: y + barH / 2 + 5,
-      fill: "#ff6b35", "font-size": 14, "text-anchor": "end", "font-weight": 700
+      fill: "#ff6b35", "font-size": 22.4, "text-anchor": "end", "font-weight": 700
     }, root);
     star.textContent = d.eng ? "★" : "";
 
     const text = svg("text", {
       x: PAD_L - (d.eng ? 32 : 16), y: y + barH / 2 + 5,
       fill: d.eng ? "#fff" : "#cfcfcf",
-      "font-size": 17, "text-anchor": "end",
+      "font-size": 27.2, "text-anchor": "end",
       "font-weight": d.eng ? 500 : 400
     }, root);
     text.textContent = d.name;
@@ -1646,7 +1646,7 @@ function renderChart8() {
     const valText = svg("text", {
       x: PAD_L, y: y + barH / 2 + 5,
       fill: d.eng ? "#ff6b35" : "#888",
-      "font-size": 15, "font-weight": 700,
+      "font-size": 24, "font-weight": 700,
       "font-family": "ui-monospace, monospace", opacity: 0
     }, root);
     valText.textContent = d.v.toFixed(2);
@@ -1668,13 +1668,13 @@ function renderChart8() {
 
   const left = svg("text", {
     x: PAD_L, y: H - 4,
-    fill: "#666", "font-size": 11, "font-weight": 700, "letter-spacing": "3"
+    fill: "#666", "font-size": 17.6, "font-weight": 700, "letter-spacing": "3"
   }, footer);
   left.textContent = "★ ENGINEERED FEATURE";
 
   const right = svg("text", {
     x: W - PAD_R, y: H - 4,
-    fill: "#ff6b35", "font-size": 11, "font-weight": 700, "letter-spacing": "3",
+    fill: "#ff6b35", "font-size": 17.6, "font-weight": 700, "letter-spacing": "3",
     "text-anchor": "end"
   }, footer);
   right.textContent = "3 OF TOP 5 ARE ENGINEERED";
