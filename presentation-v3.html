@@ -49,7 +49,7 @@ body::after {
 .slide {
   position: absolute; inset: 0;
   display: flex; flex-direction: column; justify-content: center; align-items: center;
-  padding: 80px 100px;
+  padding: 56px 80px;
   opacity: 0; visibility: hidden;
   transition: opacity 600ms cubic-bezier(.2,.8,.2,1);
 }
@@ -65,7 +65,7 @@ body::after {
 .slide.active .reveal-4 { animation-delay: 660ms; }
 
 .eyebrow {
-  font-size: 12px; letter-spacing: 0.32em; text-transform: uppercase;
+  font-size: 24px; letter-spacing: 0.32em; text-transform: uppercase;
   color: var(--muted); font-weight: 600;
 }
 .eyebrow .step {
@@ -76,21 +76,21 @@ body::after {
 .h1 {
   font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-variation-settings: "opsz" 144, "SOFT" 30;
-  font-size: clamp(56px, 8.4vw, 132px); line-height: 0.92;
+  font-size: clamp(112px, 16.8vw, 264px); line-height: 0.92;
   letter-spacing: -0.035em; font-weight: 300; margin: 0;
 }
 .h2 {
   font-family: "Fraunces", Georgia, "Times New Roman", serif;
   font-variation-settings: "opsz" 144, "SOFT" 30;
-  font-size: clamp(40px, 5.4vw, 80px); line-height: 1;
+  font-size: clamp(80px, 10.8vw, 160px); line-height: 1;
   letter-spacing: -0.022em; font-weight: 350; margin: 0;
 }
 .h3 {
-  font-size: clamp(20px, 2.2vw, 30px); line-height: 1.3;
+  font-size: clamp(40px, 4.4vw, 60px); line-height: 1.3;
   letter-spacing: -0.005em; font-weight: 350; margin: 0; color: var(--muted);
 }
 .body {
-  font-size: clamp(15px, 1.2vw, 18px);
+  font-size: clamp(30px, 2.4vw, 36px);
   line-height: 1.55; color: var(--muted); font-weight: 400;
 }
 .accent { color: var(--accent); }
@@ -100,7 +100,7 @@ body::after {
 /* Page chrome */
 .brand {
   position: fixed; top: 28px; left: 36px;
-  font-size: 10.5px; letter-spacing: 0.32em; text-transform: uppercase;
+  font-size: 21px; letter-spacing: 0.32em; text-transform: uppercase;
   color: #555; font-weight: 600; z-index: 60;
 }
 .pageno {
@@ -109,12 +109,12 @@ body::after {
   display: flex; align-items: baseline; gap: 4px;
 }
 .pageno .current {
-  font-size: 28px; font-weight: 300; color: #fff;
+  font-size: 56px; font-weight: 300; color: #fff;
   letter-spacing: -0.02em;
   font-feature-settings: "tnum" 1;
 }
 .pageno .sep, .pageno .total {
-  font-size: 13px; font-weight: 600; color: #555;
+  font-size: 26px; font-weight: 600; color: #555;
   letter-spacing: 0.18em;
 }
 .dots {
@@ -129,7 +129,7 @@ body::after {
 .dot.active { background: var(--accent); width: 24px; border-radius: 3px; }
 .hint {
   position: fixed; bottom: 28px; right: 36px;
-  font-size: 10.5px; letter-spacing: 0.24em; color: #444; z-index: 60;
+  font-size: 21px; letter-spacing: 0.24em; color: #444; z-index: 60;
   font-weight: 600;
 }
 
@@ -165,56 +165,69 @@ body::after {
 /* Chart slides */
 .chart-slide {
   justify-content: flex-start; align-items: stretch;
-  padding-top: 96px; padding-bottom: 80px;
+  padding-top: 56px; padding-bottom: 48px;
 }
 .chart-head { display: flex; flex-direction: column; gap: 14px; }
 .chart-head .h2 { max-width: 22ch; }
 .chart-head .body { max-width: 60ch; }
 .chart-body {
-  flex: 1; min-height: 0; margin-top: 32px; position: relative;
+  flex: 1; min-height: 0; margin-top: 16px; position: relative;
   display: flex; align-items: center; justify-content: center;
 }
 .chart-svg { width: 100%; height: 100%; display: block; }
 
 .s4 em { font-style: italic; color: var(--accent); font-weight: 300; }
 
-/* Slide 4 formula block — KaTeX-rendered */
+/* Slide 4 — formula on the LEFT, heatmap on the RIGHT */
+.s4-row {
+  flex: 1; min-height: 0;
+  display: flex; flex-direction: row; align-items: center;
+  gap: 48px;
+  margin-top: 32px;
+}
 .s4 .formula-block {
-  margin-top: 28px;
+  flex: 1 1 0; min-width: 0;
+  margin-top: 0;
   display: flex; flex-direction: column; align-items: center;
-  gap: 14px; flex-shrink: 0;
+  gap: 14px;
 }
 .s4 .formula-header {
-  font-size: 11px; letter-spacing: 0.32em; color: #888; font-weight: 700;
+  font-size: 18px; letter-spacing: 0.32em; color: #888; font-weight: 700;
+  margin-bottom: 4px;
 }
 .s4 .formula-display {
   color: #f5f5f5;
-  font-size: clamp(16px, 1.4vw, 22px);
+  font-size: clamp(22px, 2vw, 32px);
 }
 .s4 .formula-display .katex { color: inherit; }
 .s4 .formula-display .katex .frac-line { border-color: #aaa; }
 .s4 .formula-row {
-  display: flex; align-items: center; gap: 36px;
-  font-size: 12px; color: #888; letter-spacing: 1px; font-weight: 500;
-  margin-top: 4px;
+  display: flex; align-items: center; gap: 24px;
+  margin-top: 14px;
 }
-.s4 .formula-row .annot-orange { color: var(--accent); font-weight: 700; letter-spacing: 2px; }
 .s4 .range {
   display: flex; align-items: center; gap: 12px;
   font-family: ui-monospace, monospace;
 }
-.s4 .r-line { width: 60px; height: 1px; background: #2a2a2a; }
-.s4 .r-tick { font-size: 14px; font-weight: 700; }
+.s4 .r-line { width: 50px; height: 1px; background: #2a2a2a; }
+.s4 .r-tick { font-size: 22px; font-weight: 700; }
 .s4 .r-tick.neg { color: #4a9eff; }
 .s4 .r-tick.zero { color: #555; }
 .s4 .r-tick.pos { color: var(--accent); }
-.s4 .r-note { font-size: 10px; letter-spacing: 1.5px; color: #555; font-weight: 600; }
+.s4 .r-note-inline {
+  font-size: 14px; letter-spacing: 2.5px;
+  color: #555; font-weight: 700; text-align: center;
+  margin-top: 0;
+}
 .s4 .threshold-note {
-  font-size: 13px; color: #cfcfcf; letter-spacing: 0.01em; font-weight: 400;
-  margin-top: 2px;
+  font-size: 18px; color: #cfcfcf; letter-spacing: 0.01em; font-weight: 400;
+  margin-top: 12px; text-align: center; max-width: 38ch;
 }
 .s4 .threshold-note .accent-mono { color: var(--accent); font-family: ui-monospace, monospace; }
-.s4 .chart-body { margin-top: 24px; }
+.s4 .chart-body {
+  flex: 1 1 0; min-width: 0;
+  margin-top: 0;
+}
 
 /* Slide 9 — Conclusion (echoes the cover) */
 .s9 {
@@ -242,7 +255,7 @@ body::after {
   gap: clamp(20px, 2vw, 36px);
 }
 .s9 .conclusion-item .num {
-  font-size: clamp(20px, 2.2vw, 32px);
+  font-size: clamp(28px, 3vw, 44px);
   font-weight: 400; color: var(--accent);
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
   letter-spacing: -0.01em;
@@ -250,7 +263,7 @@ body::after {
   flex-shrink: 0; min-width: 1.5ch;
 }
 .s9 .conclusion-item .text {
-  font-size: clamp(40px, 5.6vw, 84px);
+  font-size: clamp(56px, 7.8vw, 116px);
   line-height: 1; letter-spacing: -0.03em; font-weight: 250;
   color: #fff;
   text-shadow: 0 0 24px rgba(0,0,0,0.6);
@@ -259,17 +272,17 @@ body::after {
   font-style: italic; font-weight: 200; color: var(--accent);
 }
 .s9 .conclusion-footer {
-  position: absolute; bottom: 90px; left: 0; right: 0;
+  position: absolute; bottom: 60px; left: 0; right: 0;
   text-align: center;
 }
 .s9 .bookend {
-  font-size: clamp(12px, 1vw, 14px);
+  font-size: clamp(24px, 2vw, 28px);
   letter-spacing: 0.34em; text-transform: uppercase;
   color: rgba(255, 255, 255, 0.85); font-weight: 600;
   text-shadow: 0 0 12px rgba(0,0,0,0.5);
 }
 .s9 .recap {
-  font-size: 11px; letter-spacing: 0.24em;
+  font-size: 22px; letter-spacing: 0.24em;
   color: var(--accent); font-weight: 700;
   font-family: ui-monospace, "SF Mono", Menlo, monospace;
   margin-top: 14px;
@@ -286,19 +299,19 @@ body::after {
 .s8 .hero-num {
   font-family: "Fraunces", Georgia, serif;
   font-variation-settings: "opsz" 144, "SOFT" 50;
-  font-size: clamp(140px, 22vw, 320px);
+  font-size: clamp(280px, 44vw, 640px);
   line-height: 0.85; letter-spacing: -0.06em;
   font-weight: 300;
   font-variant-numeric: tabular-nums;
 }
 .s8 .hero-tag {
-  font-size: 12px; letter-spacing: 0.34em; text-transform: uppercase;
+  font-size: 24px; letter-spacing: 0.34em; text-transform: uppercase;
   color: var(--muted); font-weight: 700;
   margin-top: 12px;
 }
 .s8 .hero-context {
   text-align: center;
-  font-size: 11px; letter-spacing: 0.18em;
+  font-size: 22px; letter-spacing: 0.18em;
   color: #555; font-weight: 600;
   margin-top: 16px;
 }
@@ -347,27 +360,29 @@ body::after {
     <div class="reveal reveal-1 chart-head">
       <div class="eyebrow"><span class="step">STEP 2A</span>FIND DUPLICATES</div>
       <h2 class="h2">Some signals are<br>the <em>same</em> signal.</h2>
-      <div class="body">Pearson <span class="mono">r</span> measures linear association between two features — covariance normalized by the product of standard deviations. The heatmap shows pairwise <span class="mono">r</span> in the fire-growth cluster; cells over <span class="mono">|r| &gt; 0.85</span> share most of their signal. Across the full matrix, <strong style="color:#fff;font-weight:500">25 pairs</strong> exceed that threshold.</div>
+      <div class="body" style="margin-top:8px;">Across the 34-feature matrix, <strong style="color:#fff;font-weight:500">25 pairs</strong> exceed <span class="mono">|r| &gt; 0.85</span>.</div>
     </div>
 
-    <div class="reveal reveal-2 formula-block">
-      <div class="formula-header">PEARSON CORRELATION COEFFICIENT</div>
-      <div class="formula-display" id="formula-pearson"></div>
-      <div class="formula-row">
-        <span class="range">
-          <span class="r-tick neg">−1</span>
-          <span class="r-line"></span>
-          <span class="r-tick zero">0</span>
-          <span class="r-line"></span>
-          <span class="r-tick pos">+1</span>
-        </span>
-        <span class="r-note">PERFECT INVERSE  ·  NO LINEAR  ·  PERFECT DIRECT</span>
+    <div class="s4-row">
+      <div class="reveal reveal-2 formula-block">
+        <div class="formula-header">PEARSON CORRELATION COEFFICIENT</div>
+        <div class="formula-display" id="formula-pearson"></div>
+        <div class="formula-row">
+          <span class="range">
+            <span class="r-tick neg">−1</span>
+            <span class="r-line"></span>
+            <span class="r-tick zero">0</span>
+            <span class="r-line"></span>
+            <span class="r-tick pos">+1</span>
+          </span>
+        </div>
+        <div class="r-note-inline">PERFECT INVERSE  ·  NO LINEAR  ·  PERFECT DIRECT</div>
+        <div class="threshold-note"><span class="accent-mono">|r| &gt; 0.85</span>  ⇒  two features carry essentially the same information</div>
       </div>
-      <div class="threshold-note"><span class="accent-mono">|r| &gt; 0.85</span>  ⇒  two features carry essentially the same information</div>
-    </div>
 
-    <div class="reveal reveal-3 chart-body">
-      <svg class="chart-svg" id="chart4" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="reveal reveal-3 chart-body">
+        <svg class="chart-svg" id="chart4" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid meet"></svg>
+      </div>
     </div>
   </section>
 
