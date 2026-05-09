@@ -407,30 +407,9 @@ body::after {
     </div>
   </section>
 
-  <!-- ============ Slide 8: The Result ============ -->
-  <section class="slide s8 chart-slide" data-slide="8">
-    <div class="reveal reveal-1 chart-head">
-      <div class="eyebrow">The Result</div>
-      <h2 class="h2">36 features.</h2>
-    </div>
 
-    <div class="reveal reveal-2 hero-block">
-      <div class="hero-num"><span class="accent">0.9987</span></div>
-      <div class="hero-tag">48H CV AUC</div>
-    </div>
-
-    <div class="reveal reveal-3 chart-body">
-      <svg class="chart-svg" id="chart8" viewBox="0 0 1100 360" preserveAspectRatio="xMidYMid meet"></svg>
-    </div>
-
-    <div class="reveal reveal-4 hero-context">
-      5-fold × 3-repeat CV ensemble  ·  CatBoost · RandomForest · XGBoost  ·  Brier 0.0115  ·  3 of top 5 features are engineered
-    </div>
-  </section>
-
-
-  <!-- ============ Slide 9: Conclusion ============ -->
-  <section class="slide s9" data-slide="9">
+  <!-- ============ Slide 8: Conclusion ============ -->
+  <section class="slide s9" data-slide="8">
     <div class="reveal reveal-1 eyebrow">THREE RULES</div>
 
     <div class="reveal reveal-2 conclusion-list">
@@ -458,7 +437,7 @@ body::after {
 
 <div class="brand">Datathon · Feature Selection</div>
 <div class="pageno" id="pageno">
-  <span class="current" id="pageCurrent">01</span><span class="sep">/</span><span class="total">09</span>
+  <span class="current" id="pageCurrent">01</span><span class="sep">/</span><span class="total">08</span>
 </div>
 <div class="dots" id="dots"></div>
 <div class="hint">← → Space</div>
@@ -1711,7 +1690,6 @@ function renderFor(i) {
   else if (i === 4) renderChart5();
   else if (i === 5) renderChart6();
   else if (i === 6) renderChart7();
-  else if (i === 7) renderChart8();
 }
 
 let pearsonFormulaRendered = false;
